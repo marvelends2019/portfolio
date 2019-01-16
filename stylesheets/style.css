@@ -1,0 +1,37 @@
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  background: #f7f8f8;
+  color: #4b4b4d;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Abril Fatface", cursive;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+.hero-section {
+  margin-top: 10vh;
+}
+
+.logo h1 {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0;
+  font-family: "Satisfy", cursive;
+  text-transform: capitalize;
+}
+.logo p {
+  font-size: 0.75rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+/*# sourceMappingURL=style.css.map */

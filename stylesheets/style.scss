@@ -1,0 +1,72 @@
+////////////////////////////////////
+//SETUP
+////////////////////////////////////
+//colors
+$firstColor:#ffe600;
+$secondColor:#f3d40b;
+$thirdColor:#E9A60C;
+$fourColor:#F1F30C;
+$fiveColor:rgb(204, 20, 97);
+$fiveColorHover:hsla(335, 82%, 44%, 0.815);
+//btn-colors
+$btnTrueHover: hsl(130, 83%, 42%);
+$btnTrue: hsla(130, 83%, 42%, 0.69);
+$btnFalseHover: #dc143c;
+$btnFalse: hsla(348, 83%, 47%, 0.753);
+$btnNullHover: #ffd000;
+$btnNull: hsla(49, 100%, 50%, 0.479);
+//basicColors
+$fontColor:#4b4b4d;
+$bkgColor:#f7f8f8;
+//fonts
+$fontLogo:'Satisfy', cursive;
+$headersFont:'Abril Fatface', cursive;
+$textFont:'Roboto', sans-serif;
+//boxshadow
+$boxShadow:0 3px 20px rgba(0,0,0,.19), 0  4px 6px rgba(0,0,0,.23);
+@function Rem($px){
+    $remSize:$px/16;
+    @return #{$remSize}rem;
+}
+html{
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+body{
+    box-sizing: border-box;
+    font-family: $textFont;
+    background: $bkgColor;
+    color: $fontColor;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: $headersFont;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+////////////////////////////////////
+//HEADER
+////////////////////////////////////
+
+
+////////////////////////////////////
+//HERO-SECTION
+////////////////////////////////////
+.hero-section{
+    margin-top: 10vh;
+}
+.logo{
+
+    h1{
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 0;
+        font-family: $fontLogo;
+        text-transform: capitalize;
+    }
+    p{
+        font-size: Rem(12);
+        text-align: center;
+        text-transform: capitalize;
+    }
+}
