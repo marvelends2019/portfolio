@@ -23,8 +23,8 @@ ul, li, ol {
 }
 
 .titleHeader {
-  border-top: #4b4b4d 1px solid;
-  border-bottom: #4b4b4d 1px solid;
+  border-top: #4b4b4d 2px solid;
+  border-bottom: #4b4b4d 2px solid;
 }
 
 .buttons {
@@ -238,11 +238,15 @@ header nav a:active {
 .hero-section {
   padding-top: 30vh;
   height: 100vh;
-  background: radial-gradient(#ffe815, #f3d40b) center top no-repeat;
+  background: radial-gradient(#fdea3e, #f3d40b) center top no-repeat;
   text-transform: capitalize;
   margin: 0;
 }
-.hero-section a {
+.hero-section button {
+  outline: none;
+}
+
+.downArrow {
   color: #4b4b4d;
   text-decoration: none;
   font-size: 3rem;
@@ -254,8 +258,9 @@ header nav a:active {
   animation-fill-mode: both;
   animation-iteration-count: infinite;
 }
-.hero-section button {
-  outline: none;
+
+.downArrow:hover {
+  color: #4b4b4d;
 }
 
 @keyframes subeBaja {
@@ -293,8 +298,26 @@ section.nosotros {
   background: #f3d40b;
   border: 1px #f3d40b solid;
 }
-section.nosotros h2 {
-  color: red;
+section.nosotros .info {
+  overflow: hidden;
+  background: #4b4b4d;
+  color: #f7f8f8;
+  border-radius: 0.3125rem;
+}
+section.nosotros .info .nosotrosMarvelends {
+  padding: 0.9375rem;
+  text-align: center;
+}
+section.nosotros .info .nosotrosMarvelends h3 {
+  font-family: "Satisfy", cursive;
+  text-transform: capitalize;
+  text-decoration: underline;
+}
+section.nosotros .info .nosotrosMarvelends hr {
+  background: #f7f8f8;
+}
+section.nosotros .info .nosotrosMarvelends a {
+  color: #f7f8f8;
 }
 
 /*# sourceMappingURL=style.css.map */

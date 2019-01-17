@@ -2,7 +2,7 @@
 //SETUP
 ////////////////////////////////////
 //colors
-$firstColor:#ffe815;
+$firstColor:#fdea3e;
 $secondColor:#f3d40b;
 $thirdColor:#E9A60C;
 $fourColor:#F1F30C;
@@ -49,9 +49,10 @@ ul, li, ol{
     list-style: none;
 }
 .titleHeader{
-    border-top: #4b4b4d 1px solid;
-    border-bottom: #4b4b4d 1px solid;
+    border-top: #4b4b4d 2px solid;
+    border-bottom: #4b4b4d 2px solid;
 }
+
 ////////////////////////////////////
 //BUTTONS
 ////////////////////////////////////
@@ -257,19 +258,22 @@ header{
     background: radial-gradient($firstColor, $secondColor) center top no-repeat;
     text-transform: capitalize;
     margin: 0;
-    a{
-        color:$fontColor;
-        text-decoration: none;
-        font-size: Rem(48);
-        display: block;
-        margin-top: Rem(25);
-        animation-name: subeBaja;
-        animation-duration: 3s;
-        animation-timing-function: linear;
-        animation-fill-mode: both;
-        animation-iteration-count: infinite;
-    }
     button{outline: none;}
+}
+.downArrow{
+    color:$fontColor;
+    text-decoration: none;
+    font-size: Rem(48);
+    display: block;
+    margin-top: Rem(25);
+    animation-name: subeBaja;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+.downArrow:hover{
+    color: $fontColor;
 }
 @keyframes subeBaja{
     0%{
@@ -309,6 +313,21 @@ header{
 section.nosotros{
     background: $secondColor;
     border: 1px $secondColor solid;
-    h2{color:red}
-    
+    .info{
+        overflow: hidden;
+        background:$fontColor;
+        color:$bkgColor;
+        border-radius: Rem(5);
+        .nosotrosMarvelends{
+            padding: Rem(15);
+            text-align: center;
+            h3{
+                font-family: $fontLogo;
+                text-transform: capitalize;
+                text-decoration: underline;
+            }
+            hr{background: $bkgColor;}
+            a{color:$bkgColor}
+        }
+    }
 }
