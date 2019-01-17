@@ -52,7 +52,9 @@ ul, li, ol{
     border-top: #4b4b4d 2px solid;
     border-bottom: #4b4b4d 2px solid;
 }
-
+.scale:hover{
+    transform: scale(1.05);
+}
 ////////////////////////////////////
 //BUTTONS
 ////////////////////////////////////
@@ -138,6 +140,12 @@ ul, li, ol{
     box-shadow: $boxShadow;
     color: $bkgColor;
     outline: none;
+}
+.boxShadow{
+    box-shadow: $boxShadow;
+}
+.textShadow{
+    text-shadow:0 3px 3px rgba(0,0,0,.19), 0  4px 16px rgba(0,0,0,.23);
 }
 .btnCta{
     background: $fiveColor;
@@ -330,4 +338,11 @@ section.nosotros{
             a{color:$bkgColor}
         }
     }
+}
+////////////////////////////////////
+//PORTFOLIO SECTION
+////////////////////////////////////
+section.portfolio{
+    padding: Rem(10);
+    background: $secondColor;
 }
