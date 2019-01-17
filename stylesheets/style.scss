@@ -2,7 +2,7 @@
 //SETUP
 ////////////////////////////////////
 //colors
-$firstColor:#ffe600;
+$firstColor:#ffee57;
 $secondColor:#f3d40b;
 $thirdColor:#E9A60C;
 $fourColor:#F1F30C;
@@ -37,36 +37,264 @@ body{
     font-family: $textFont;
     background: $bkgColor;
     color: $fontColor;
-    box-sizing: border-box;
 }
 h1,h2,h3,h4,h5,h6{
     font-family: $headersFont;
     font-weight: lighter;
     text-transform: uppercase;
 }
+ul, li, ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+////////////////////////////////////
+//BUTTONS
+////////////////////////////////////
+.buttons{
+    padding: Rem(15);
+    flex: 1 1 0;
+    text-align: center; 
+}
+.btnMarvelend{
+    border: none;
+    margin: Rem(7);
+    border-top: 2px solid $fontColor;
+    border-bottom: 2px solid $fontColor;
+    background: transparent;
+    text-transform: uppercase;
+    padding: Rem(10) Rem(18);
+    font-weight: 400;
+    outline: none;
+    font-family: $headersFont;
+    position: relative;
+    overflow:hidden;
+    text-decoration: none;
+    color: $fontColor;
+    display: inline-block;
+}
+.btnMarvelend:hover{
+    cursor: pointer;
+}
+
+.btnMarvelend:active{
+    transform: scale(.97);
+}
+.btnAnimation::before{
+    display: none;
+    content: "*";
+    position: absolute;
+    left: 5px;
+    top:14px;
+    animation-name: a;
+    animation-duration: .3s;
+}
+.btnAnimation:hover::before{
+    content: "*";
+    display: inline-block;
+}
+@keyframes a{
+    0%{
+        left: -15px;
+    }
+    100%{
+        left: 5px;
+    }
+}
+.btnAnimation::after{
+    content: "*";
+    display: none;
+    position: absolute;
+    right: 5px;
+    top:14px;
+    animation-name: b;
+    animation-duration: .3s;
+}
+.btnAnimation:hover::after{
+    content: "*";
+    display: inline-block;
+}
+@keyframes b{
+    0%{
+        right: -15px;
+    }
+    100%{
+        right: 5px;
+    }
+}
+.btn{
+    text-decoration: none;
+    text-align: center;
+    margin: Rem(7);
+    padding: Rem(5) Rem(10);
+    min-width: Rem(120);
+    font-weight: 500;
+    border: none;
+    box-shadow: $boxShadow;
+    color: $bkgColor;
+    outline: none;
+}
+.btnCta{
+    background: $fiveColor;
+}
+.btnTrue{
+    background: $btnTrue;
+}
+.btnFalse{
+    background: $btnFalse;
+}
+.btnNull{
+    background: $btnNull;
+}
+.btnCta:hover{
+    background: $fiveColorHover;
+    cursor: pointer;
+}
+.btnTrue:hover{
+    background: $btnTrueHover;
+    cursor: pointer;
+    
+}
+.btnFalse:hover{
+    background: $btnFalseHover;
+    cursor: pointer;
+}
+.btnNull:hover{
+    background: $btnNullHover;
+    cursor: pointer;
+}
+.btnCta:active{
+    background: $fiveColor;
+    transform: scale(.97);
+}
+.btnTrue:active{
+    background: $btnTrue;
+    transform: scale(.97);
+}
+.btnFalse:active{
+    background: $btnFalse;
+    transform: scale(.97);
+}
+.btnNull:active{
+    background: $btnNull;
+    transform: scale(.97);
+}
 ////////////////////////////////////
 //HEADER
 ////////////////////////////////////
-
-
+header{
+    width: 100%;
+    position: absolute;
+    padding: Rem(10);
+    .btnResponsive{
+        font-size: Rem(14);
+        float: right;
+        color: $secondColor;
+        border-radius: Rem(2);
+        border: 2px solid $fontColor;
+        background: $fontColor;
+    }
+    .social-nav{
+       a{
+           font-size: Rem(24);
+           color: $fontColor;
+           text-decoration: none;
+       }
+       a{
+           margin-right: Rem(8);
+       }
+    }
+    nav{
+        background: #4b4b4d;
+        margin-top:Rem(8);
+        ul{
+            display:none;
+            padding: Rem(10);
+        }
+        a{
+            padding: Rem(5);
+            display: inline-block;
+            color:$bkgColor;
+            text-decoration: none;
+            font-family: $headersFont;
+            text-transform: uppercase;
+            position: relative;
+        }
+        a:hover{
+            padding: Rem(5);
+            color: $bkgColor;
+            text-decoration: none;
+            border-top: 2px solid $bkgColor;
+            border-bottom: 2px solid $bkgColor;
+        }
+        a:hover::after{
+            content:'*';
+            position: absolute;
+            top: Rem(8);
+            right:-5px;
+        }
+        a:hover::before{
+            content:'*';
+            position: absolute;
+            top: Rem(8);
+            left:-5px;
+        }
+        a:active{
+            transform: scale(.9);
+        }
+    }
+}
 ////////////////////////////////////
 //HERO-SECTION
 ////////////////////////////////////
 .hero-section{
-    margin-top: 10vh;
+    padding-top: 30vh;
+    height:100vh;
+    background: radial-gradient($firstColor, $secondColor);
+    text-transform: capitalize;
+    a{
+        color:$fontColor;
+        text-decoration: none;
+        font-size: Rem(48);
+        display: block;
+        margin-top: Rem(25);
+        animation-name: subeBaja;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+    }
+    button{outline: none;}
+}
+@keyframes subeBaja{
+    0%{
+        margin-top: 15px;
+    }
+    50%{
+        margin-top: 25px;
+    }
+    100%{
+        margin-top: 15px;
+    }
 }
 .logo{
-
+    padding: 0;
+    margin-bottom: Rem(25);
     h1{
         font-weight: bold;
         text-align: center;
         margin-bottom: 0;
         font-family: $fontLogo;
         text-transform: capitalize;
+        line-height: Rem(24);
     }
     p{
-        //font-size: Rem(12);
-        text-align: center;
-        text-transform: capitalize;
+        margin-bottom: 0px;
+
+    }
+}
+.codeBar{
+    i{
+        margin-left: Rem(8);
     }
 }

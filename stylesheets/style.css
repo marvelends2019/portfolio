@@ -8,7 +8,6 @@ body {
   font-family: "Roboto", sans-serif;
   background: #f7f8f8;
   color: #4b4b4d;
-  box-sizing: border-box;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -17,20 +16,271 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
-.hero-section {
-  margin-top: 10vh;
+ul, li, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
+.buttons {
+  padding: 0.9375rem;
+  flex: 1 1 0;
+  text-align: center;
+}
+
+.btnMarvelend {
+  border: none;
+  margin: 0.4375rem;
+  border-top: 2px solid #4b4b4d;
+  border-bottom: 2px solid #4b4b4d;
+  background: transparent;
+  text-transform: uppercase;
+  padding: 0.625rem 1.125rem;
+  font-weight: 400;
+  outline: none;
+  font-family: "Abril Fatface", cursive;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: #4b4b4d;
+  display: inline-block;
+}
+
+.btnMarvelend:hover {
+  cursor: pointer;
+}
+
+.btnMarvelend:active {
+  transform: scale(0.97);
+}
+
+.btnAnimation::before {
+  display: none;
+  content: "*";
+  position: absolute;
+  left: 5px;
+  top: 14px;
+  animation-name: a;
+  animation-duration: 0.3s;
+}
+
+.btnAnimation:hover::before {
+  content: "*";
+  display: inline-block;
+}
+
+@keyframes a {
+  0% {
+    left: -15px;
+  }
+  100% {
+    left: 5px;
+  }
+}
+.btnAnimation::after {
+  content: "*";
+  display: none;
+  position: absolute;
+  right: 5px;
+  top: 14px;
+  animation-name: b;
+  animation-duration: 0.3s;
+}
+
+.btnAnimation:hover::after {
+  content: "*";
+  display: inline-block;
+}
+
+@keyframes b {
+  0% {
+    right: -15px;
+  }
+  100% {
+    right: 5px;
+  }
+}
+.btn {
+  text-decoration: none;
+  text-align: center;
+  margin: 0.4375rem;
+  padding: 0.3125rem 0.625rem;
+  min-width: 7.5rem;
+  font-weight: 500;
+  border: none;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.19), 0 4px 6px rgba(0, 0, 0, 0.23);
+  color: #f7f8f8;
+  outline: none;
+}
+
+.btnCta {
+  background: #cc1461;
+}
+
+.btnTrue {
+  background: rgba(18, 196, 48, 0.69);
+}
+
+.btnFalse {
+  background: rgba(219, 20, 60, 0.753);
+}
+
+.btnNull {
+  background: rgba(255, 208, 0, 0.479);
+}
+
+.btnCta:hover {
+  background: rgba(204, 20, 97, 0.815);
+  cursor: pointer;
+}
+
+.btnTrue:hover {
+  background: #12c430;
+  cursor: pointer;
+}
+
+.btnFalse:hover {
+  background: #dc143c;
+  cursor: pointer;
+}
+
+.btnNull:hover {
+  background: #ffd000;
+  cursor: pointer;
+}
+
+.btnCta:active {
+  background: #cc1461;
+  transform: scale(0.97);
+}
+
+.btnTrue:active {
+  background: rgba(18, 196, 48, 0.69);
+  transform: scale(0.97);
+}
+
+.btnFalse:active {
+  background: rgba(219, 20, 60, 0.753);
+  transform: scale(0.97);
+}
+
+.btnNull:active {
+  background: rgba(255, 208, 0, 0.479);
+  transform: scale(0.97);
+}
+
+header {
+  width: 100%;
+  position: absolute;
+  padding: 0.625rem;
+}
+header .btnResponsive {
+  font-size: 0.875rem;
+  float: right;
+  color: #f3d40b;
+  border-radius: 0.125rem;
+  border: 2px solid #4b4b4d;
+  background: #4b4b4d;
+}
+header .social-nav a {
+  font-size: 1.5rem;
+  color: #4b4b4d;
+  text-decoration: none;
+}
+header .social-nav a {
+  margin-right: 0.5rem;
+}
+header nav {
+  background: #4b4b4d;
+  margin-top: 0.5rem;
+}
+header nav ul {
+  display: none;
+  padding: 0.625rem;
+}
+header nav a {
+  padding: 0.3125rem;
+  display: inline-block;
+  color: #f7f8f8;
+  text-decoration: none;
+  font-family: "Abril Fatface", cursive;
+  text-transform: uppercase;
+  position: relative;
+}
+header nav a:hover {
+  padding: 0.3125rem;
+  color: #f7f8f8;
+  text-decoration: none;
+  border-top: 2px solid #f7f8f8;
+  border-bottom: 2px solid #f7f8f8;
+}
+header nav a:hover::after {
+  content: "*";
+  position: absolute;
+  top: 0.5rem;
+  right: -5px;
+}
+header nav a:hover::before {
+  content: "*";
+  position: absolute;
+  top: 0.5rem;
+  left: -5px;
+}
+header nav a:active {
+  transform: scale(0.9);
+}
+
+.hero-section {
+  padding-top: 30vh;
+  height: 100vh;
+  background: radial-gradient(#ffee57, #f3d40b);
+  text-transform: capitalize;
+}
+.hero-section a {
+  color: #4b4b4d;
+  text-decoration: none;
+  font-size: 3rem;
+  display: block;
+  margin-top: 1.5625rem;
+  animation-name: subeBaja;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+.hero-section button {
+  outline: none;
+}
+
+@keyframes subeBaja {
+  0% {
+    margin-top: 15px;
+  }
+  50% {
+    margin-top: 25px;
+  }
+  100% {
+    margin-top: 15px;
+  }
+}
+.logo {
+  padding: 0;
+  margin-bottom: 1.5625rem;
+}
 .logo h1 {
   font-weight: bold;
   text-align: center;
   margin-bottom: 0;
   font-family: "Satisfy", cursive;
   text-transform: capitalize;
+  line-height: 1.5rem;
 }
 .logo p {
-  text-align: center;
-  text-transform: capitalize;
+  margin-bottom: 0px;
+}
+
+.codeBar i {
+  margin-left: 0.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
