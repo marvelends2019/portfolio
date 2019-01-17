@@ -22,6 +22,11 @@ ul, li, ol {
   list-style: none;
 }
 
+.titleHeader {
+  border-top: #4b4b4d 1px solid;
+  border-bottom: #4b4b4d 1px solid;
+}
+
 .buttons {
   padding: 0.9375rem;
   flex: 1 1 0;
@@ -233,8 +238,9 @@ header nav a:active {
 .hero-section {
   padding-top: 30vh;
   height: 100vh;
-  background: radial-gradient(#ffee57, #f3d40b);
+  background: radial-gradient(#ffe815, #f3d40b) center top no-repeat;
   text-transform: capitalize;
+  margin: 0;
 }
 .hero-section a {
   color: #4b4b4d;
@@ -281,6 +287,14 @@ header nav a:active {
 
 .codeBar i {
   margin-left: 0.5rem;
+}
+
+section.nosotros {
+  background: #f3d40b;
+  border: 1px #f3d40b solid;
+}
+section.nosotros h2 {
+  color: red;
 }
 
 /*# sourceMappingURL=style.css.map */
